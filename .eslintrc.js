@@ -38,6 +38,8 @@ module.exports = {
     'semi': [
       'error',
       'always'
-    ]
+    ],
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': ['off']
   }
 };
