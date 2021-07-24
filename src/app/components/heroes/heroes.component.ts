@@ -11,7 +11,6 @@ import { MessageService } from '../../services/message.service';
 export class HeroesComponent implements OnInit {
   // Attr
   heroes: Hero[] = [];
-  selectedHero?: Hero;
 
   constructor(
     private heroService: HeroService,
@@ -25,10 +24,5 @@ export class HeroesComponent implements OnInit {
   // Methods
   getHeroes(): void {
     this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id = ${hero.id}`);
   }
 }
